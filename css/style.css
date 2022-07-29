@@ -1,0 +1,43 @@
+main {
+  padding-top: 100px;
+}
+main .arit {
+  padding-top: 40px;
+  margin-top: 40px;
+}
+main .arit h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+main .arit .hasil {
+  margin-top: 20px;
+  text-align: center;
+}
+main .arit .hasil .col-hasil {
+  background-color: yellow;
+}
+main .arit .proses {
+  margin-top: 20px;
+}
+main .arit .proses .col button {
+  margin-top: 10px;
+  width: 100%;
+}
+main .arit .proses .nugas button {
+  height: 80px;
+}
+main .arit .hasil-1 {
+  margin-top: 20px;
+}
+main .arit .hasil-1 .col {
+  text-align: center;
+}
+main .arit .hasil-1 .col-button .row button {
+  width: 100%;
+}
+main #ten {
+  margin-bottom: 100px;
+}
+main #ten #hasilten {
+  margin-top: 20px;
+}/*# sourceMappingURL=style.css.map */

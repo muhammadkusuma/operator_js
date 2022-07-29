@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+    <title>PTM-4 _ M. Wira Ade Kusuma</title>
+    <!-- my css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-md">
+                <a class="navbar-brand" href="#">OPERASI PADA JAVASCRIPT</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto me-1 mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#arit">Aritmatika</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#nugas">Penugasan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#banding-card">Perbandingan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#logic">Logika</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#bit">Bitwise</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ten">Tenary</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- aritmatika -->
+        <div class="container-md card arit" id="arit">
+            <h1 class="card-title">Aritmatika</h1>
+            <div class="card-body">
+                <div class="row hasil">
+                    <div class="col">
+                        <div class="row">
+                            <h3>x = 10</h3>
+
+                        </div>
+                        <div class="row">
+                            <h3>y = 20</h3>
+                        </div>
+                    </div>
+                    <div class="col col-hasil">
+                        <h3 id="hasil">HASIL</h3>
+                    </div>
+                </div>
+                <div class="row proses">
+                    <div class="col "><button onclick="tambah()" class="btn btn-success">Tambah</button></div>
+                    <div class="col"><button onclick="kurang()" class="btn btn-success">Kurang</button></div>
+                    <div class="col"><button onclick="kali()" class="btn btn-success">Kali</button></div>
+                    <div class="col"><button onclick="bagi()" class="btn btn-success">Bagi</button></div>
+                    <div class="col"><button onclick="modulus()" class="btn btn-success">Modulus</button></div>
+                </div>
+                <hr>
+                <div class="row hasil-1">
+                    <div class="col">
+                        <h3 id="hasil-1">Nilai Default x = 10</h3>
+                    </div>
+                    <div class="col col-button">
+                        <div class="row"><button onclick="inc()" class="btn btn-success">Increment</button></div>
+                        <div class="row"><button onclick="dec()" class="btn btn-danger">Decrement</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- penugasan -->
+        <div class="container-md card arit" id="nugas">
+            <h1 class="card-title">Penugasan</h1>
+            <div class="card-body">
+                <div class="row hasil">
+                    <div class="col">
+                        <div class="row">
+                            <h3>x = 10</h3>
+
+                        </div>
+                    </div>
+                    <div class="col col-hasil">
+                        <h3 id="isi">default 10</h3>
+                    </div>
+                </div>
+                <div class="row proses">
+                    <div class="col nugas"><button onclick="isi()" class="btn btn-success">Isi Nilai menjadi 2</button>
+                    </div>
+                    <div class="col nugas"><button onclick="isitambah()" class="btn btn-success">Isi dan Tambah
+                            2</button>
+                    </div>
+                    <div class="col nugas"><button onclick="isikurang()" class="btn btn-success">Isi dan kurang
+                            2</button>
+                    </div>
+                    <div class="col nugas"><button onclick="isikali()" class="btn btn-success">Isi dan Kali 2</button>
+                    </div>
+                    <div class="col nugas"><button onclick="isipangkat()" class="btn btn-success">Isi dan pemangkatan
+                            2</button>
+                    </div>
+                    <div class="col nugas"><button onclick="isibagi()" class="btn btn-success">Isi dan bagi 2</button>
+                    </div>
+                    <div class="col nugas"><button onclick="isimodulus()" class="btn btn-success">Isi dan sisa bagi
+                            2</button></div>
+                </div>
+            </div>
+        </div>
+        <!-- perbandingan -->
+        <div class="container-md card arit" id="banding-card">
+            <h1 class="card-title">Perbandingan</h1>
+            <div class="card-body">
+                <div class="row hasil">
+                    <div class="col">
+                        <div class="row">
+                            <h3>x = 10</h3>
+                            <h3>y = 7</h3>
+                        </div>
+                    </div>
+                    <div class="col col-hasil">
+                        <h3 id="banding">hasil</h3>
+                    </div>
+                </div>
+                <div class="row proses">
+                    <div class="col nugas"><button onclick="lebih()" class="btn btn-success">x > y</button>
+                    </div>
+                    <div class="col nugas"><button onclick="kecil()" class="btn btn-success">x < y</button>
+                    </div>
+                    <div class="col nugas"><button onclick="sama()" class="btn btn-success">x == y</button>
+                    </div>
+                    <div class="col nugas"><button onclick="tidak()" class="btn btn-success">x !== y</button>
+                    </div>
+                    <div class="col nugas"><button onclick="lebihSama()" class="btn btn-success">x >= y</button>
+                    </div>
+                    <div class="col nugas"><button onclick="lebihKecil()" class="btn btn-success">x <= y</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Logika -->
+        <div class="container-md card arit" id="logic">
+            <h1 class="card-title">Logika</h1>
+            <div class="card-body">
+                <div class="row hasil">
+                    <div class="col">
+                        <div class="row">
+                            <h3>x = 10</h3>
+                            <h3>y = 7</h3>
+                        </div>
+                    </div>
+                    <div class="col col-hasil">
+                        <h3 id="logika">hasil</h3>
+                    </div>
+                </div>
+                <div class="row proses">
+                    <div class="col nugas"><button onclick="and()" class="btn btn-success">x && y</button>
+                    </div>
+                    <div class="col nugas"><button onclick="or()" class="btn btn-success">x | | y</button>
+                    </div>
+                    <div class="col nugas"><button onclick="negasi()" class="btn btn-success">! x</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- bitwise -->
+        <div class="container-md card arit" id="bit">
+            <h1 class="card-title">Bitwise</h1>
+            <div class="card-body">
+                <div class="row hasil">
+                    <div class="col">
+                        <div class="row">
+                            <h3>x = 11</h3>
+                            <h3>y = 9</h3>
+                        </div>
+
+                    </div>
+                    <div class="col col-hasil">
+                        <h3 id="bitwise">HASIL</h3>
+                    </div>
+                </div>
+                <div class="row proses">
+                    <div class="col "><button onclick="and1()" class="btn btn-success">x & y</button></div>
+                    <div class="col"><button onclick="or1()" class="btn btn-success">x | y</button></div>
+                    <div class="col"><button onclick="xor()" class="btn btn-success">x ^ y</button></div>
+                    <div class="col"><button onclick="negasi1()" class="btn btn-success">~x</button></div>
+                    <div class="col"><button onclick="left()" class="btn btn-success">x << y</button>
+                    </div>
+                    <div class="col"><button onclick="right()" class="btn btn-success">x >> y</button></div>
+                    <div class="col"><button onclick="left1()" class="btn btn-success">x <<< y</button>
+                    </div>
+                    <div class="col"><button onclick="right1()" class="btn btn-success">x >>> y</button></div>
+                </div>
+
+            </div>
+        </div>
+        <!-- tenary -->
+        <div class="container-md card arit" id="ten">
+            <h1 class="card-title">Tenary</h1>
+            <div class="card-body">
+                <div class="row proses">
+                    <div class="col "><button onclick="tanya()" class="btn btn-success">Klik Aku !</button></div>
+                </div>
+                <h3 id="hasilten" class="card-title text-center">-</h3>
+            </div>
+        </div>
+    </main>
+    <!-- my script -->
+    <script>
+        // aritmatika
+        let x = 10
+        let y = 20
+        let a = 10
+        // penjumlahan
+        function tambah() {
+            document.getElementById('hasil').innerHTML = x + y
+        }
+        // pengurangan
+        function kurang() {
+            document.getElementById('hasil').innerHTML = x - y
+        }
+        // perkalian
+        function kali() {
+            document.getElementById('hasil').innerHTML = x * y
+        }
+        // pembagian
+        function bagi() {
+            document.getElementById('hasil').innerHTML = x / y
+        }
+        // modulus
+        function modulus() {
+            document.getElementById('hasil').innerHTML = x % y
+        }
+        // increment
+        function inc() {
+            document.getElementById('hasil-1').innerHTML = a++
+        }
+        // decrement
+        function dec() {
+            document.getElementById('hasil-1').innerHTML = a--
+        }
+
+        // penugasan
+        let x1 = 10
+
+        function isi() {
+            document.getElementById('isi').innerHTML = x1 = 2
+        }
+
+        function isitambah() {
+            document.getElementById('isi').innerHTML = x1 += 2
+        }
+
+        function isikurang() {
+            document.getElementById('isi').innerHTML = x1 -= 2
+        }
+
+        function isikali() {
+            document.getElementById('isi').innerHTML = x1 *= 2
+        }
+
+        function isipangkat() {
+            document.getElementById('isi').innerHTML = x1 **= 2
+        }
+
+        function isibagi() {
+            document.getElementById('isi').innerHTML = x1 /= 2
+        }
+
+        function isimodulus() {
+            document.getElementById('isi').innerHTML = x1 %= 2
+        }
+
+        // relasi/perbandingan
+        let x2 = 10
+        let y2 = 7
+        // Lebih Besar >
+        function lebih() {
+            document.getElementById('banding').innerHTML = x2 > y2
+        }
+        // Lebih Kecil <
+        function kecil() {
+            document.getElementById('banding').innerHTML = x2 < y2
+        }
+        // Sama Dengan == atau ===
+        function sama() {
+            document.getElementById('banding').innerHTML = x2 === y2
+        }
+        // Tidak Sama dengan != atau !==
+        function tidak() {
+            document.getElementById('banding').innerHTML = x2 !== y2
+        }
+        // Lebih Besar Sama dengan >=
+        function lebihSama() {
+            document.getElementById('banding').innerHTML = x2 >= y2
+        }
+        // Lebih Kecil Sama dengan <=
+        function lebihKecil() {
+            document.getElementById('banding').innerHTML = x2 <= y2
+        }
+
+        // logika
+        let x3 = 10
+        let y3 = 7
+        // Logika AND &&
+        function and() {
+            document.getElementById('logika').innerHTML = x3 && y3
+        }
+        // Logika OR ||
+        function or() {
+            document.getElementById('logika').innerHTML = x3 || y3
+        }
+        // Negasi / kebalikan!
+        function negasi() {
+            document.getElementById('logika').innerHTML = !x3
+        }
+
+        // bitwise
+        let x4 = 11
+        let y4 = 9
+        //     AND &
+        function and1() {
+            document.getElementById('bitwise').innerHTML = x4 & y4
+        }
+        //     OR |
+        function or1() {
+            document.getElementById('bitwise').innerHTML = x4 | y4
+        }
+        //     XOR ^
+        function xor() {
+            document.getElementById('bitwise').innerHTML = x4 ^ y4
+        }
+        //     Negasi / kebalikan~
+        function negasi1() {
+            document.getElementById('bitwise').innerHTML = ~x4
+        }
+        //     Left Shift«
+        function left() {
+            document.getElementById('bitwise').innerHTML = x4 << y4
+        }
+        // Right Shift»
+        function right() {
+            document.getElementById('bitwise').innerHTML = x4 >> y4
+        }
+        // Left Shift(unsigned)« <
+        function left1() {
+            document.getElementById('bitwise').innerHTML = x4 >>> y4
+        }
+        //     Right Shift(unsigned)» >
+        function right1() {
+            document.getElementById('bitwise').innerHTML = x4 >>> y4
+        }
+
+        // ternary
+
+        function tanya() {
+
+            let perta = confirm('Apakah Berumur Diatas 18 Tahun?')
+            let hasil = perta ? 'Lebih Dewasa' : 'Lebih Muda'
+            document.getElementById('hasilten').innerHTML = hasil
+        }
+
+    </script>
+    <!-- bootstrap js -->
+    <script src="./bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>
